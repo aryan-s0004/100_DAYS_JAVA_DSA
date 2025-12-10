@@ -1,0 +1,7 @@
+# ignore Java build output
+out/
+*.class
+
+# ignore IntelliJ files
+.idea/
+*.iml
