@@ -1,6 +1,6 @@
 package Arrays;
 
-public class Problem02 {
+public class Problem_02 {
 
     // -------------------------------------------------------
     // ITERATIVE BINARY SEARCH FUNCTION
