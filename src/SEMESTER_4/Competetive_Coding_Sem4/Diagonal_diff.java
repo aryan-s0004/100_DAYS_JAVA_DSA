@@ -1,4 +1,4 @@
-package Competetive_Coding_Sem4;
+package SEMESTER_4.Competetive_Coding_Sem4;
 
 import java.util.Scanner;
 
