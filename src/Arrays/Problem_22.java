@@ -27,9 +27,9 @@ public class Problem_22 {
     public static void main(String[] args) {
 
         int[][] matrix = {
-                {1, 2, 3, 4},
-                {578, 6, 7, 8},
-                {9, 10, 11, 12}
+                {1, 2, 3},
+                {578, 6, 7},
+                {9, 10, 11}
         };
 
         max2D(matrix);

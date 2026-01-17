@@ -30,7 +30,7 @@ public class Problem_05 {
 
     public static void main(String[] args) {
 
-        int[] arr = {3, 51, 9, 778, -5, -5, -5, -5, -5, -5};
+        int[] arr = {3, -51, 9, 778, -5, -5, -5, -5, -5, -5};
         int k = 3;
 
         sum_Subarr(arr, k);

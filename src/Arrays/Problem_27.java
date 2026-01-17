@@ -1,7 +1,5 @@
 package Arrays;
-
 public class Problem_27 {
-
     // Floor Function: returns value (greatest element <= target)
     public static int floor(int[] arr, int target) {
         int left = 0;
@@ -10,11 +8,11 @@ public class Problem_27 {
 
         while (left <= right) {
             int mid = left + (right - left) / 2;
-
             if (arr[mid] <= target) {
                 ans = arr[mid];     // possible floor value
                 left = mid + 1;     // search right for larger valid value
-            } else {
+            }
+            else {
                 right = mid - 1;    // search left
             }
         }

@@ -23,13 +23,14 @@ public class Problem_03 {
         for (int right = k; right < n; right++) {
             windowSum = windowSum - arr[left] + arr[right];
             left++;
-            System.out.println((double) windowSum / k);
+            System.out.println((float) windowSum / k);
         }
     }
 
     public static void main(String[] args) {
 
-        int[] arr = {-5, -5, -5, -5, -5, -5, -5, -5};
+        int[] arr = {-15, -5, 0, 3, -5, -35, 45, -50};
+
         int k = 3;
 
         avg_Subarr(arr, k);

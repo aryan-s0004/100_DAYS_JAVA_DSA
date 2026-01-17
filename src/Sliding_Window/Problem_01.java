@@ -3,43 +3,52 @@ package Sliding_Window;
 public class Problem_01 {
 
     /**
-     * Returns the maximum sum of any contiguous subarray of size k = 2
-     * using the fixed-size sliding window technique.
+     * Returns the maximum sum of any contiguous subarray of size k
+     * using the Fixed Size Sliding Window technique.
      */
-    public static void maxSumOfSubarraySize2(int[] arr) {
+    public static int maxSumSubarray(int[] arr, int k) {
 
-        int k = 2;                          // Fixed window size
-        int n = arr.length;                // Length of array
+        int n = arr.length;
 
-        // Initial window sum (first k elements)
+        // Step 0: Edge case check
+        if (n < k) {
+            return -1;   // Not enough elements to form window
+        }
+
+        // Step 1: Calculate sum of first window (size k)
         int windowSum = 0;
         for (int i = 0; i < k; i++) {
             windowSum += arr[i];
         }
 
-        int maxSum = windowSum;             // Stores maximum sum found so far
-        int left = 0;                       // Left pointer of window
+        int maxSum = windowSum;   // Store best result
+        int left = 0;             // Left pointer of window
 
-        // Slide the window across the array
+        // Step 2: Slide the window
         for (int right = k; right < n; right++) {
-            windowSum = windowSum - arr[left] + arr[right]; // Update window sum
-            left++;                                         // Move window forward
 
+            // Remove left element + add new right element
+            windowSum = windowSum - arr[left] + arr[right];
+
+            // Move window forward
+            left++;
+
+            // Update answer
             if (windowSum > maxSum) {
-                maxSum = windowSum;                          // Update max sum
+                maxSum = windowSum;
             }
         }
 
-        System.out.println("Maximum subarray sum (k=2) = " + maxSum);
+        return maxSum;
     }
 
-    // Main method (program entry point)
+    // Main method (entry point)
     public static void main(String[] args) {
 
-        System.out.println("WELCOME BACK");
-        System.out.println("WAP to return max sum of subarray of size k = 2");
+        int[] arr = {-7, -2, -3, -6, 7, 9};
+        int k = 2;
 
-        int[] arr = {-781, -2, -3, -6};
-        maxSumOfSubarraySize2(arr);
+        int result = maxSumSubarray(arr, k);
+        System.out.println("Maximum subarray sum of size " + k + " = " + result);
     }
 }

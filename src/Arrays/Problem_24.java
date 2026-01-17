@@ -26,7 +26,7 @@ public class Problem_24 {
     // MAIN FUNCTION
     public static void main(String[] args) {
 
-        System.out.println("WAP TO FIND LOWER BOUND");
+        System.out.println("WAP TO FIND UPPER BOUND");
 
         int[] arr = {-55, -30, -2, 3, 32, 44, 55, 69, 87, 952, 1452};
         int target = 86;

@@ -1,7 +1,5 @@
 package Arrays;
-
 public class Problem_30 {
-
     static int firstOccurrence(int[] arr, int target) {
         int l = 0, r = arr.length - 1, ans = -1;
 
@@ -40,10 +38,15 @@ public class Problem_30 {
 
     static int countOccurrences(int[] arr, int target) {
         int first = firstOccurrence(arr, target);
-        if (first == -1) return 0;
+        if (first == -1)
+        {
+            return 0;
+        }
 
         int last = lastOccurrence(arr, target);
-        return last - first + 1;
+        {
+            return last - first + 1;
+        }
     }
 
     public static void main(String[] args) {
